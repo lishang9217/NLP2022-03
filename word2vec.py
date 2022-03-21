@@ -18,4 +18,4 @@ from gensim.models.word2vec import PathLineSentences
 corpus = PathLineSentences(source_dir)
 model = Word2Vec(sentences=corpus, vector_size=200, window=5, min_count=1, workers=4)
 
-print(model.wv.most_similar(positive=["銀行","回饋"], negative=["信用卡"]))
+print(model.wv.most_similar(positive=["銀行","回饋"], negative=["信用卡"]))#優惠 商品 折扣
