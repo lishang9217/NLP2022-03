@@ -32,10 +32,9 @@ from gensim.models import Word2Vec
 from gensim.models.word2vec import PathLineSentences
 
 corpus = PathLineSentences(creditcard_dir)
-model = Word2Vec(sentences=corpus, vector_size=100, window=5, min_count=1, workers=4)
+mode = Word2Vec(sentences=corpus, vector_size=100, window=5, min_count=1, workers=4)
+print(mode.wv.most_similar(positive=["銀行","回饋"], negative=["信用卡"]))#優惠 商品 折扣
 
 corpus2 = PathLineSentences(Lifeismoney_dir)
-mode2 = Word2Vec(sentences=corpus2, vector_size=100, window=5, min_count=1, workers=4)
-
-print(model.wv.most_similar(positive=["銀行","回饋"], negative=["信用卡"]))#優惠 商品 折扣
-print(model.wv.most_similar(positive=["優惠","折扣"], negative=["商品"]))
+mode = Word2Vec(sentences=corpus2, vector_size=100, window=5, min_count=1, workers=4)
+print(mode.wv.most_similar(positive=["優惠","折扣"], negative=["商品"]))
