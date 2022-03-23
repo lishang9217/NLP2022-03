@@ -37,7 +37,7 @@ import time
 target_date = "Mar 11" #Feb 14
 
 for i in range(3545,3551):
-    URL = "http://ptt.cc/bbs/creditcard/index%d.html" % i 
+    URL = "http://ptt.cc/bbs/creditcard/index%d.html" % i #Lifeismoney
     print("URL", URL)
 
     articles = ptt_scraping(url=URL)
